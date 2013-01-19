@@ -17,8 +17,22 @@ using System.Web.Http.WebHost.Properties;
 using System.Web.Http.WebHost.Routing;
 using System.Web.Routing;
 
+
+
+
+
 namespace System.Web.Http.WebHost
 {
+	
+#if MONO
+	public static class HttpRequestExt
+	{
+		public static Stream GetBufferlessInputStream(this HttpRequest request){
+			return request.InputStream;
+		}
+	}
+#endif
+
     /// <summary>
     /// A <see cref="IHttpAsyncHandler"/> that passes ASP.NET requests into the <see cref="HttpServer"/>
     /// pipeline and write the result back.

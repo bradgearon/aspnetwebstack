@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory),Runtime.sln))\tools\WebStack.settings.targets" />
+  <Import Project="..\..\tools\WebStack.settings.targets" />
   <PropertyGroup>
     <ProductVersion>1.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -9,18 +9,33 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <ScriptOutputPath>$(OutputPath)</ScriptOutputPath>
     <OutputPath>bin\$(Configuration)</OutputPath>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SPA</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>DEBUG;TRACE;CODE_ANALYSIS</DefineConstants>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>False</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>False</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'CodeAnalysis|AnyCPU' ">
     <DefineConstants>TRACE</DefineConstants>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>False</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'CodeCoverage|AnyCPU' ">
     <DefineConstants>DEBUG;TRACE;CODE_ANALYSIS;CODECOV</DefineConstants>
+    <DebugType>none</DebugType>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>False</Optimize>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,7 +99,7 @@
     <!-- purpose of compile step here is to do some basic syntax checking on the files prior to packaging -->
     <ItemGroup>
       <!-- for validation, compile all js files in the project; this doesn't mean they will be included in the package -->
-      <_CompileJavascript Include="@(Content->'%(FullPath)')" Condition="%(Extension) == '.js'" />
+      <_CompileJavascript Include="@(Content-&gt;'%(FullPath)')" Condition="%(Extension) == '.js'" />
     </ItemGroup>
   </Target>
   <Target Name="BuildUpshot" BeforeTargets="Build">
@@ -163,6 +178,6 @@
       <CleanPkgOutputFile Include="$(ScriptOutputPath)\nav.js" />
       <CleanPkgOutputFile Include="$(ScriptOutputPath)\nav.transitions.js" />
     </ItemGroup>
-    <Delete Files="@(CleanPkgOutputFile->'%(RootDir)%(Directory)%(Filename)%(Extension)')" />
+    <Delete Files="@(CleanPkgOutputFile-&gt;'%(RootDir)%(Directory)%(Filename)%(Extension)')" />
   </Target>
 </Project>

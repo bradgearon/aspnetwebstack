@@ -16,9 +16,31 @@ using System.Web.WebPages;
 using Microsoft.Internal.Web.Utils;
 using WebMatrix.Data;
 using WebMatrix.WebData.Resources;
+#if MONO
+using Mono.Security;
+#endif
 
 namespace WebMatrix.WebData
 {
+#if MONO
+	public static class Crypto
+	{
+		public static string HashPassword (string password)
+		{
+			var provider = SHA1CryptoServiceProvider.Create();
+			var pBytes = System.Text.Encoding.UTF8.GetBytes(password);
+			var hash = provider.ComputeHash(pBytes);
+			return System.Text.Encoding.UTF8.GetString(hash);
+		}
+
+		public static bool VerifyHashedPassword (string hashedPassword, string password)
+		{
+			var toComparePassword = Crypto.HashPassword(password);
+			return string.Compare(hashedPassword, toComparePassword, StringComparison.CurrentCulture) == 0;
+		}
+	}
+#endif
+
     public class SimpleMembershipProvider : ExtendedMembershipProvider
     {
         private const int TokenSizeInBytes = 16;

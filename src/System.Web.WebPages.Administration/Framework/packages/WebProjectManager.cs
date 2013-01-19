@@ -93,7 +93,7 @@ namespace System.Web.WebPages.Administration.PackageManager
             {
                 packagesToUpdate = packagesToUpdate.Where(p => !String.IsNullOrEmpty(p.Tags) && p.Tags.ToLower().Contains(WebPagesPreferredTag));
             }
-            return SourceRepository.GetUpdates(packagesToUpdate, includePrerelease: false).AsQueryable();
+            return SourceRepository.GetUpdates(packagesToUpdate, false, false).AsQueryable();
         }
 
         internal IEnumerable<string> InstallPackage(IPackage package)
@@ -153,7 +153,7 @@ namespace System.Web.WebPages.Administration.PackageManager
 
         public IPackage GetUpdate(IPackage package)
         {
-            return SourceRepository.GetUpdates(new[] { package }, includePrerelease: false).SingleOrDefault();
+            return SourceRepository.GetUpdates(new[] { package }, false, false).SingleOrDefault();
         }
 
         private void AddBindingRedirects(AppDomain appDomain)
@@ -199,7 +199,7 @@ namespace System.Web.WebPages.Administration.PackageManager
             const int BufferSize = 30;
             return packages.Where(package => package.IsLatestVersion)
                 .AsBufferedEnumerable(BufferSize)
-                .DistinctLast(PackageEqualityComparer.Id, PackageComparer.Version);
+				.DistinctLast(PackageEqualityComparer.Id, PackageComparer.Version);
         }
 
         internal IEnumerable<IPackage> GetPackagesRequiringLicenseAcceptance(IPackage package)

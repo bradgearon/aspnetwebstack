@@ -1,0 +1,58 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\System.Web.WebPages.Administration\Framework\packages\WebProjectManager.cs">
+    <Files>
+      <File FileName="src\System.Net.Http.Formatting\Handlers\ProgressStream.cs" Line="64" Column="36" />
+      <File FileName="src\System.Web.WebPages.Deployment\AssemblyUtils.cs" Line="21" Column="86" />
+      <File FileName="src\System.Net.Http.Formatting\PushStreamContent.cs" Line="34" Column="10" />
+      <File FileName="src\System.Net.Http.Formatting\Formatting\JsonContractResolver.cs" Line="7" Column="7" />
+      <File FileName="src\System.Net.Http.Formatting\Properties\AssemblyInfo.cs" Line="11" Column="1" />
+      <File FileName="src\CommonAssemblyInfo.cs" Line="32" Column="6" />
+      <File FileName="src\Common\CommonWebApiResources.resx" Line="1" Column="1" />
+      <File FileName="src\System.Net.Http.Formatting\Properties\Resources.resx" Line="1" Column="1" />
+      <File FileName="src\TransparentCommonAssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="src\System.Net.Http.Formatting\Formatting\MediaTypeFormatter.cs" Line="14" Column="25" />
+      <File FileName="src\System.Web.Razor\Editor\BackgroundParser.cs" Line="350" Column="24" />
+      <File FileName="src\System.Web.WebPages\ApplicationStartPage.cs" Line="10" Column="17" />
+      <File FileName="src\System.Web.WebPages\Instrumentation\HttpContextAdapter.generated.cs" Line="14" Column="38" />
+      <File FileName="src\System.Web.WebPages.Administration\Login.cshtml" Line="32" Column="1" />
+      <File FileName="src\WebMatrix.WebData\SimpleMembershipProvider.cs" Line="39" Column="99" />
+      <File FileName="src\System.Web.Razor\StateMachine.cs" Line="1" Column="1" />
+      <File FileName="src\System.Web.WebPages.Administration\EnableInstructions.generated.cs" Line="86" Column="25" />
+      <File FileName="src\System.Web.WebPages.Administration\Framework\packages\RemoteAssembly.cs" Line="36" Column="40" />
+      <File FileName="src\System.Web.WebPages.Administration\Framework\packages\WebProjectManager.cs" Line="183" Column="14" />
+      <File FileName="src\System.Web.WebPages.Administration\packages\Default.generated.cs" Line="35" Column="83" />
+      <File FileName="src\System.Web.Mvc\Html\DefaultDisplayTemplates.cs" Line="209" Column="49" />
+      <File FileName="src\System.Web.Mvc\Properties\AssemblyInfo.cs" Line="21" Column="62" />
+      <File FileName="src\Microsoft.Web.Mvc\Properties\AssemblyInfo.cs" Line="10" Column="30" />
+      <File FileName="src\System.Web.WebPages\Properties\AssemblyInfo.cs" Line="14" Column="36" />
+      <File FileName="src\System.Web.Http\Controllers\ReflectedHttpActionDescriptor.cs" Line="348" Column="63" />
+      <File FileName="src\System.Web.Http.WebHost\SuppressFormsAuthRedirectModule.cs" Line="129" Column="23" />
+      <File FileName="src\System.Web.Http.WebHost\HttpControllerHandler.cs" Line="35" Column="2" />
+      <File FileName="src\Common\TaskHelpersExtensions.cs" Line="1" Column="1" />
+      <File FileName="src\Common\HttpMethodHelper.cs" Line="1" Column="1" />
+      <File FileName="src\Microsoft.Web.Http.Data\DataControllerConfigurationAttribute.cs" Line="12" Column="7" />
+      <File FileName="src\Microsoft.Web.Http.Data\TypeUtility.cs" Line="1" Column="1" />
+      <File FileName="src\System.Net.Http.Formatting\HttpContentExtensions.cs" Line="68" Column="71" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="src" expanded="True">
+            <Node name="System.Web.WebPages.Administration" expanded="True">
+              <Node name="Framework" expanded="True">
+                <Node name="packages" expanded="True">
+                  <Node name="WebProjectManager.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

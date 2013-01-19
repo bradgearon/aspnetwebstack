@@ -166,7 +166,7 @@
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  
   <Target Name="AfterBuild">
     <!--Build the NuGet package for help page-->
     <ItemGroup>

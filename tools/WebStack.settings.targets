@@ -32,9 +32,5 @@
     </PropertyGroup>
 
     <!-- Everything is delay signed by default -->
-    <PropertyGroup>
-        <SignAssembly>true</SignAssembly>
-        <DelaySign>true</DelaySign>
-        <AssemblyOriginatorKeyFile>$(WebStackRootPath)\tools\35MSSharedLib1024.snk</AssemblyOriginatorKeyFile>
-    </PropertyGroup>
+
 </Project>
